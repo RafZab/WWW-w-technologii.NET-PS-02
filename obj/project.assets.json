@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\raffi\\source\\repos\\AdressBook\\AdressBook.csproj",
+      "projectUniqueName": "C:\\Users\\raffi\\Projekty\\AdressBook\\AdressBook.csproj",
       "projectName": "AdressBook",
-      "projectPath": "C:\\Users\\raffi\\source\\repos\\AdressBook\\AdressBook.csproj",
+      "projectPath": "C:\\Users\\raffi\\Projekty\\AdressBook\\AdressBook.csproj",
       "packagesPath": "C:\\Users\\raffi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\raffi\\source\\repos\\AdressBook\\obj\\",
+      "outputPath": "C:\\Users\\raffi\\Projekty\\AdressBook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
