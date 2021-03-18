@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yojNHvz7TXJB6OLhLQAOOIFNgbnspkxIsK2SkXtlHXAj0DnfyGqy0PzesXWqp4CZibXZGfoLBzAiSgY1MqtxzA==",
+  "dgSpecHash": "EAGQlSMQZA+djsPqi5EpXmPNvtuEiN+lThQARJKreh5Atw/KMDhJHJgzpD2SRp+ua0wTRUIlM/eDRwkPcu/fkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\raffi\\Projekty\\AdressBook\\AdressBook.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\raffi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

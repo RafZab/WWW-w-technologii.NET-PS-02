@@ -72,3 +72,5 @@ C:\Users\raffi\Projekty\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.dll
 C:\Users\raffi\Projekty\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.pdb
 C:\Users\raffi\Projekty\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.genruntimeconfig.cache
 C:\Users\raffi\Projekty\AdressBook\obj\Debug\netcoreapp3.1\AdressBook.csproj.CopyComplete
+C:\Users\raffi\Projekty\AdressBook\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\raffi\Projekty\AdressBook\obj\Debug\netcoreapp3.1\Razor\Pages\Address.cshtml.g.cs

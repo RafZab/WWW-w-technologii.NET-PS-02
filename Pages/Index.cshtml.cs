@@ -6,8 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace AdressBook.Pages
+
 {
     public class IndexModel : PageModel
     {
@@ -37,7 +40,9 @@ namespace AdressBook.Pages
             {
                 return Page();
             }
-            return RedirectToPage("./Privacy");
+
+            HttpContext.Session.SetString("SessionAddress",JsonConvert.SerializeObject(Address));
+            return RedirectToPage("./Address");
         }
     }
 }
