@@ -17,6 +17,7 @@ namespace AdressBook.Pages
         private readonly ILogger<IndexModel> _logger;
         [BindProperty]
         public Address Address { get; set; }
+        public List<Address> AddressList { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string Name { get; set; }
@@ -32,6 +33,7 @@ namespace AdressBook.Pages
             {
                 Name = "User";
             }
+            
         }
 
         public IActionResult OnPost()
@@ -41,7 +43,15 @@ namespace AdressBook.Pages
                 return Page();
             }
 
-            HttpContext.Session.SetString("SessionAddress",JsonConvert.SerializeObject(Address));
+            var SessionAddressListJSON = HttpContext.Session.GetString("SessionAddresses");
+           
+            if (SessionAddressListJSON == null)
+                AddressList = new List<Address>();
+            else
+                AddressList = JsonConvert.DeserializeObject<List<Address>>(SessionAddressListJSON);
+
+            AddressList.Add(Address);
+            HttpContext.Session.SetString("SessionAddresses",JsonConvert.SerializeObject(AddressList));
             return RedirectToPage("./Address");
         }
     }

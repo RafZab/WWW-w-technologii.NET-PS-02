@@ -14,12 +14,19 @@ namespace AdressBook.Pages
     {
         public Address Address { get; set; }
 
+        public List<Address> AddressList { get; set; }
+
+
         public void OnGet()
         {
-            var SessionAddress = HttpContext.Session.GetString("SessionAddress");
+            var SessionAddressListJSON = HttpContext.Session.GetString("SessionAddresses");
 
-            if (SessionAddress != null)
-                Address = JsonConvert.DeserializeObject<Address>(SessionAddress);
+            if (SessionAddressListJSON != null)
+                AddressList = JsonConvert.DeserializeObject<List<Address>>(SessionAddressListJSON);
+            else
+            {
+                AddressList = new List<Address>();
+            }
         }
     }
 }

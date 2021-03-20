@@ -1,22 +1,28 @@
-﻿@page
+﻿
+@page
 @model AdressBook.Pages.AddressModel
 @{
+    ViewData["Title"] = "List Of Addresses";
 }
 
 
-<p>Dane w zapisane w sesji</p>
-@if (Model.Address != null)
-{
-    <p>
-        @Html.DisplayNameFor(model => Model.Address.Street): @Model.Address.Street
-</p>
-<p>
-    @Html.DisplayNameFor(model => Model.Address.City): @Model.Address.City
-</p>
-<p>
-    @Html.DisplayNameFor(model => Model.Address.Number): @Model.Address.Number
-</p>
-<p>
-    @Html.DisplayNameFor(model => Model.Address.ZipCode):@Model.Address.ZipCode
-</p>
+
+<p>Data saved in session:</p>
+
+@{ if (Model.AddressList.Count() > 0)
+    {
+       
+        foreach (AdressBook.Forms.Address Address in Model.AddressList)
+        {
+            <p> @Html.DisplayNameFor(model => Address.Street): @Address.Street </p>
+            <p> @Html.DisplayNameFor(model => Address.City): @Address.City </p>
+            <p> @Html.DisplayNameFor(model => Address.Number): @Address.Number </p>
+            <p> @Html.DisplayNameFor(model => Address.ZipCode):@Address.ZipCode </p>
+        } 
+    }
+     
+    else
+    {
+        <p>There is not data in session!</p>
+    }
 }
